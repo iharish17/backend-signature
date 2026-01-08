@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', signRoutes);
 app.use('/api/auth', require('./routes/authRoutes'));
-app.use("/api/docs", documentRoutes);
+app.use("/api/documents", documentRoutes);
 
 
 mongoose.connect(process.env.MONGO_URI)
