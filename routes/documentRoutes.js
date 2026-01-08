@@ -10,7 +10,7 @@ const {
 const auth = require("../middleware/auth");
 const upload = require("../utils/multerConfig");
 
-router.post("/upload", auth, upload.single("pdf"), uploadDocument);
+router.post("/uploads", auth, upload.single("pdf"), uploadDocument);
 router.get("/mine", auth, getUserDocuments);
 router.get("/download/:id", auth, downloadDocument);
 
